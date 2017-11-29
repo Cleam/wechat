@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  background-color: #f13838;
+}
+p {
+  margin: 0;
+}
+.red-share-wrap {
+  position: relative;
+  background: url(./act-share-bg.jpg) no-repeat;
+  background-size: 100% auto;
+  height: 12.21rem;
+}
+.red-share-wrap .loading-mark {
+  position: fixed;
+  display: none;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.red-share-wrap .loading-mark .loading-icon {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      -ms-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999PX;
+  border-top: 0.05rem solid #fff;
+  -webkit-animation: loadAct 1s linear 0s infinite ;
+          animation: loadAct 1s linear 0s infinite ;
+}
+@-webkit-keyframes loadAct {
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes loadAct {
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.red-share-wrap .result-wrap {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.red-share-wrap .result-wrap .result-content {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 4rem;
+  background-color: #fff;
+  font-size: 14PX;
+  padding: 0.3rem 0.3rem 0;
+  border-radius: 10PX;
+}
+[data-dpr="2"] .red-share-wrap .result-wrap .result-content {
+  font-size: 28PX;
+}
+[data-dpr="3"] .red-share-wrap .result-wrap .result-content {
+  font-size: 42PX;
+}
+.red-share-wrap .result-wrap .result-content .cont-font {
+  padding: 0.2rem 0;
+}
+.red-share-wrap .result-wrap .result-content .copy-btn {
+  display: block;
+  color: #9EEA6A;
+  text-decoration: none;
+  padding: 0.15rem 0;
+  text-align: center;
+}
+.red-share-wrap .redpack-mark {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.red-share-wrap .redpack-mark .share-arrow-icon {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0.38rem;
+  background: url(../../images/m/share-arrow.png) no-repeat;
+  background-size: 100% auto;
+  width: 2.84rem;
+  height: 2.5rem;
+}
+.red-share-wrap .redpack-mark .share-content-wrap {
+  position: relative;
+  margin: 2.98rem auto 0;
+  width: 4.1rem;
+  padding: 1.05rem 0.4rem 0.6rem;
+  text-align: center;
+  font-size: 17PX;
+  color: #fff;
+  background-color: #f13838;
+  border-radius: 10PX;
+}
+[data-dpr="2"] .red-share-wrap .redpack-mark .share-content-wrap {
+  font-size: 34PX;
+}
+[data-dpr="3"] .red-share-wrap .redpack-mark .share-content-wrap {
+  font-size: 51PX;
+}
+.red-share-wrap .redpack-mark .share-content-wrap .redpack-icon {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -0.6rem;
+  display: block;
+  background: url(../../images/m/redpack-icon.png) no-repeat;
+  background-size: 100% auto;
+  width: 1.34rem;
+  height: 1.34rem;
+}
+.red-share-wrap .check-pack {
+  position: absolute;
+  z-index: 10;
+  top: 6rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 2rem;
+  height: 2rem;
+}
+.red-share-wrap .check-pack:hover,
+.red-share-wrap .check-pack:visited,
+.red-share-wrap .check-pack:active {
+  background: transparent;
+}
+.red-share-wrap .red-share-footer {
+  position: absolute;
+  z-index: 1;
+  top: 8.4rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.red-share-wrap .red-share-footer .alipay-icon {
+  display: inline-block;
+  margin-bottom: 0.1rem;
+  background: url(../../images/m/alipay-icon.png) no-repeat;
+  background-size: 100% auto;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.red-share-wrap .red-share-footer p {
+  font-size: 15PX;
+  color: #910000;
+}
+[data-dpr="2"] .red-share-wrap .red-share-footer p {
+  font-size: 30PX;
+}
+[data-dpr="3"] .red-share-wrap .red-share-footer p {
+  font-size: 45PX;
+}

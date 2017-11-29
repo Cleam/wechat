@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://m.hongdaye.net/article.php?do=view&id=86000&from=timeline&isappinstalled=0 -->
+<html lang="zh-cmn-Hans" data-dpr="1" style="font-size: 55.4007px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>支付宝红包天天领，领到就是赚到</title>
+    <script src="./zfb_files/hm.js"></script>
+    <script src="./zfb_files/fixScreen.js"></script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="ML-Config" content="fullscreen=yes,preventMove=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="description" content="支付宝红包天天领，领到就是赚到">
+    <meta name="full-screen" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="360-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="browsermode" content="application">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link href="./zfb_files/act-pack-share.css" rel="stylesheet">
+</head>
+
+<body style="font-size: 12px;">
+    <div class="red-share-wrap">
+        <div class="loading-mark">
+            <i class="loading-icon"></i>
+        </div>
+
+        <!-- 领取 -->
+        <div class="result-wrap">
+            <div class="result-content">
+                <p class="cont-font">现金红包领取成功，快去打开支付宝查看吧</p>
+                <a class="copy-btn" href="javascript:;" title="" id="close_dialog">确认</a>
+            </div>
+        </div>
+
+        <!-- 分享 -->
+        <div class="redpack-mark">
+            <i class="share-arrow-icon"></i>
+            <div class="share-content-wrap">
+                <i class="redpack-icon"></i>
+                <p>发到朋友圈完成领取，100%中奖，最高99元</p>
+            </div>
+        </div>
+        <div class="check-pack" data-clipboard-text="逛有钱给各位逛友发红包啦~支付宝红包，每天都能领，到店付款时立即使用！大家快来领红包，别人都领了，你也要来领！复制此消息，打开支付宝就能领取！DhyU2i71zL"></div>
+        <div class="red-share-footer">
+            <i class="alipay-icon"></i>
+            <p>由支付宝提供</p>
+            <p>到店付款时可立即使用</p>
+        </div>
+    </div>
+
+    <script src="./zfb_files/jquery-1.8.3.min.js"></script>
+    <script src="./zfb_files/clipboard.min.js"></script>
+    <script src="./zfb_files/fastclick.min.js"></script>
+    <script src="./zfb_files/common.js"></script>
+
+    <script type="text/javascript">
+        // 复制剪切版, 弹出分享层
+        var clipboard = new Clipboard('.check-pack');
+        clipboard.on('success', function (e) {
+            $(".redpack-mark").show(); // 显示分享蒙层
+        });
+
+        clipboard.on('error', function (e) {
+            $(".redpack-mark").show(); // 显示分享蒙层
+        });
+    </script>
+
+    <script src="./zfb_files/weixin_share.js"></script>
+    <script type="text/javascript">
+        var weixin_browser = '0';
+        var baidu_page_view = '/act/alipay/wap_2';
+
+        // 微信分享
+        if (weixin_browser == '1') {
+            $(document).ready(function () {
+                // 微信分享
+                var share_cfg = {
+                    title: '支付宝红包天天领， 领到就是赚到！',
+                    link: 'http://m.hongdaye.net/article.php?do=view&id=86000&from=wx_circle_share',
+                    imgUrl: 'https://static.gyq.v6h5.com/images/m/zhifubao.png?v=1',
+                    desc: '支付宝红包，每天都能领，到店付款时立即使用！ 大家快来领红包，别人都领了，你也要来领！',
+                    success: function () {
+                        $(".redpack-mark").hide();
+                        $('.result-wrap').show();
+                    },
+                    cancel: function () {
+                        $(".redpack-mark").show(); // 显示分享蒙层
+                    }
+                };
+                nhd.wx_share(share_cfg);
+            });
+        }
+
+        $("#close_dialog").click(function () {
+            $('.result-wrap').hide();
+        });
+
+        _hmt.push(['_trackPageview', baidu_page_view]);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
