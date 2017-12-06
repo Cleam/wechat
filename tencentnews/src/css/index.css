@@ -1,0 +1,832 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,main,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section {
+    display: block
+}
+
+ol,ul {
+    list-style: none
+}
+
+blockquote,q {
+    quotes: none
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+    content: '';
+    content: none
+}
+
+a:hover,a:active {
+    outline: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+body,button,input,select,textarea {
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei','\5FAE\8F6F\96C5\9ED1', tahoma,arial,sans-serif
+}
+
+.clearfix:after {
+    content: "\00A0";
+    display: block;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden
+}
+
+.clearfix {
+    zoom:1}
+
+img {
+    vertical-align: bottom
+}
+
+html {
+    font-size: 50px;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+.center_mid {
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    top: 50%;
+    left: 50%
+}
+
+.container {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: relative
+}
+
+.rule_btn {
+    position: absolute;
+    color: #fcd5cf;
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    top: 0.3rem;
+    right: 0.3rem
+}
+
+.rule_btn img {
+    width: 0.24rem;
+    margin-right: 0.06rem
+}
+
+.nologin {
+    padding-top: 4.82rem
+}
+
+.nologin .user {
+    text-align: center
+}
+
+.nologin .user img {
+    width: 1.66rem
+}
+
+.nologin .user .btn {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.42rem;
+    height: 0.76rem;
+    width: 4.5rem;
+    line-height: 0.76rem;
+    border: 1px solid #fff;
+    border-radius: 0.48rem;
+    margin: 0.36rem auto 0.7rem
+}
+
+.nologin .item {
+    background: url(//mat1.gtimg.com/news/qqnews/campus/img/tip_bg.png) top center no-repeat;
+    background-size: 100% auto;
+    width: 6.87rem;
+    height: 1.59rem;
+    margin: 0 auto 0.12rem
+}
+
+.nologin .item .left {
+    float: left;
+    font-size: 0.32rem;
+    color: #fffeb4;
+    width: 1.2rem;
+    text-align: center;
+    margin-top: 0.42rem;
+    line-height: 0.38rem
+}
+
+.nologin .item .right {
+    color: #fff;
+    font-size: 0.26rem;
+    display: table;
+    height: 100%;
+    padding-right: 0.38rem;
+    line-height: 0.45rem
+}
+
+.nologin .item .right p {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.haslogin {
+    padding-top: 5.2rem;
+    display: none
+}
+
+.haslogin .con {
+    background-color: #fff;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 0.16rem;
+    padding-bottom: 0.54rem
+}
+
+.haslogin .user {
+    text-align: center;
+    position: relative
+}
+
+.haslogin .user .avatar {
+    width: 1.73rem;
+    background: url(//mat1.gtimg.com/news/qqnews/campus/img/avatar_bg.png) top center no-repeat;
+    background-size: 1.73rem auto;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    top: -0.8rem
+}
+
+.haslogin .user .avatar img {
+    width: 1.06rem;
+    height: 1.06rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.12rem
+}
+
+.haslogin .user .nickname {
+    font-size: 0.34rem;
+    color: #666;
+    padding-top: 0.52rem
+}
+
+.haslogin .user .t {
+    text-align: center;
+    font-size: 0.38rem;
+    font-weight: bold;
+    color: #666;
+    letter-spacing: 0.06rem;
+    margin-top: 0.22rem
+}
+
+.haslogin .item {
+    margin-top: 0.38rem
+}
+
+.haslogin .item:first-child {
+    margin-top: 0.2rem
+}
+
+.haslogin .item .title {
+    width: 2.08rem;
+    height: 0.59rem;
+    line-height: 0.59rem;
+    background-color: #fd5458;
+    color: #fff;
+    font-size: 0.36rem;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    text-indent: 0.3rem;
+    letter-spacing: 1px;
+    position: relative;
+    left: -0.02rem
+}
+
+.haslogin .item .card {
+    background: url(//mat1.gtimg.com/news/qqnews/campus/img/card.png) top center no-repeat;
+    background-size: 100% auto;
+    width: 6.31rem;
+    height: 1.62rem;
+    margin: 0.34rem auto 0
+}
+
+.haslogin .item .card .left {
+    float: left;
+    width: 4.6rem
+}
+
+.haslogin .item .card .left .pic {
+    width: 1.44rem;
+    float: left
+}
+
+.haslogin .item .card .left .pic img {
+    width: 0.85rem;
+    display: block;
+    margin: 0.36rem auto 0
+}
+
+.haslogin .item .card .left .text {
+    padding-top: 0.26rem
+}
+
+.haslogin .item .card .left .text p:first-child {
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: #fefefe;
+    line-height: 0.6rem
+}
+
+.haslogin .item .card .left .text p:last-child {
+    font-size: 0.24rem;
+    color: #fee4de
+}
+
+.haslogin .item .card .right {
+    text-align: center;
+    padding-top: 0.1rem
+}
+
+.haslogin .item .card .right p:first-child {
+    font-size: 0.36rem;
+    color: #fdd6d5;
+}
+
+.haslogin .item .card .right p:last-child {
+    color: #fff;
+    line-height: 0.6rem;
+    margin-top: 0.12rem
+}
+
+.haslogin .item .card .right p:last-child em {
+    font-size: 0.35rem;
+    font-style: normal
+}
+
+.haslogin .item .card .right p:last-child span {
+    font-size: 0.84rem;
+}
+
+.haslogin .item .ss {
+    background: url(//mat1.gtimg.com/news/qqnews/campus/img/ss.png) top center no-repeat;
+    background-size: 100% auto;
+    width: 6.28rem;
+    height: 1.99rem;
+    margin: 0.34rem auto 0;
+    line-height: 1.99rem
+}
+
+.haslogin .item .ss p {
+    font-size: 0.36rem;
+    color: #fff;
+    text-indent: 0.58rem
+}
+
+.haslogin .item .mybtn {
+    color: #fff;
+    width: 6.29rem;
+    height: 0.84rem;
+    line-height: 0.84rem;
+    text-align: center;
+    background: #ffa21d;
+    font-size: 0.36rem;
+    border-radius: 0.12rem;
+    margin: 0.3rem auto 0.1rem;
+    position: relative
+}
+
+.haslogin .item .mybtn .progress {
+    position: absolute;
+    border-radius: 0.12rem;
+    height: 100%;
+    background: rgba(68,68,103,0.5)
+}
+
+.haslogin .item .mybtn .txt {
+    position: relative;
+    z-index: 2
+}
+
+.haslogin .item .btn_disabled {
+    background-color: #aaa
+}
+
+.haslogin .item .tip {
+    text-align: center;
+    font-size: 0.24rem;
+    color: #666
+}
+
+.haslogin .bb {
+    height: 0.2rem
+}
+
+.news {
+    background-color: #fff;
+    padding: 0.23rem;
+    display: none
+}
+
+.news .title h2 {
+    font-size: 0.26rem;
+    color: #454545
+}
+
+.news .title h2 em {
+    font-style: normal;
+    padding: 0 0.04rem
+}
+
+.news .title h2 span {
+    color: #a2a2a2;
+    font-weight: normal
+}
+
+.news .title .dot {
+    float: right
+}
+
+.news .title .dot em {
+    display: block;
+    float: left;
+    width: 0.12rem;
+    height: 0.12rem;
+    border-radius: 50%;
+    border: 1px solid #a3a3a3;
+    margin-left: 0.1rem
+}
+
+.news .title .dot .cur {
+    background-color: #a3a3a3
+}
+
+.news .con {
+    position: relative;
+    overflow: hidden
+}
+
+.news ul {
+    margin-top: 0.2rem;
+    position: relative;
+    width: 100%;
+    height: 1.8rem
+}
+
+.news ul li {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.news ul .sitem {
+    position: relative
+}
+
+.news ul .pic {
+    float: left;
+    width: 2.65rem;
+    height: 1.8rem
+}
+
+.news ul .pic img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.news ul .text {
+    margin-left: 2.94rem;
+    position: absolute;
+    height: 100%
+}
+
+.news ul .text .t {
+    font-size: 0.26rem;
+    color: #444
+}
+
+.news ul .text .btn {
+    width: 2.31rem;
+    height: 0.37rem;
+    line-height: 0.37rem;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #56b6fe;
+    border: 1px solid #56b6fe;
+    border-radius: 0.08rem;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.uplayer {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none
+}
+
+.uplayer .con {
+    background-color: #fff;
+    width: 6.6rem;
+    border-radius: 0.20rem;
+    left: 50%;
+    top: 1.4rem;
+    padding-bottom: 0.64rem;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, 1.3rem, 0);
+    transform: translate3d(-50%, 1.3rem, 0)
+}
+
+.uplayer .close {
+    top: 0rem;
+    right: 0.30rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    position: absolute
+}
+
+.uplayer .close img {
+    display: block;
+    width: 0.51rem;
+    margin: 0.26rem auto 0
+}
+
+.uplayer .intro {
+    color: #666666;
+    font-size: 0.32rem;
+    width: 5.8rem;
+    line-height: 0.46rem;
+    padding-top: 0.26rem;
+    margin: 0 auto;
+    text-align: center
+}
+
+.uplayer .intro h3 {
+    font-weight: normal;
+    font-size: 0.42rem;
+    margin-top: 0.2rem
+}
+
+.uplayer .intro p {
+    margin-top: 0.18rem;
+    font-size: 0.34rem
+}
+
+.uplayer .intro p span {
+    color: #ff4a4a
+}
+
+.uplayer .wifi_img {
+    width: 3.88rem;
+    margin: 0 auto;
+    padding: 0.4rem 0 0
+}
+
+.uplayer .wifi_img img {
+    width: 3.88rem;
+    display: block
+}
+
+.uplayer .wifi_btn {
+    width: 5.8rem;
+    margin: 0.4rem auto 0;
+    overflow: hidden;
+    clear: both
+}
+
+.uplayer .wifi_btn a {
+    width: 2.2rem;
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #f66767;
+    border-radius: 5px
+}
+
+.uplayer .wifi_btn .no {
+    border: 1px solid #b5b5b5;
+    color: #b5b5b5;
+    float: left
+}
+
+.uplayer .wifi_btn .yes {
+    color: #fff;
+    background-color: #f66767;
+    float: right
+}
+
+.uplayer .tx_img {
+    width: 3.88rem;
+    margin: 0.6rem auto 0;
+    display: none
+}
+
+.uplayer .tx_img img {
+    display: block;
+    width: 100%
+}
+
+.uplayer .goto_btn {
+    width: 3.6rem;
+    font-size: 0.38rem;
+    line-height: 0.6rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f66767;
+    border: 1px solid #f66767;
+    border-radius: 5px;
+    margin: 0.4rem auto 0
+}
+
+.uplayer .goto_btn a {
+    color: #fff;
+    text-decoration: none
+}
+
+.uplayer .show {
+    display: block !important
+}
+
+.update {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #fff
+}
+
+.update .close {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    width: 0.52rem;
+    height: 0.52rem
+}
+
+.update .close img {
+    display: block;
+    width: 100%
+}
+
+.update .con {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -0.84rem;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    text-align: center
+}
+
+.update .con img {
+    width: 1.42rem;
+    height: 1.42rem
+}
+
+.update .con p {
+    color: #41414e;
+    font-size: 0.28rem;
+    line-height: 0.44rem
+}
+
+.update .con .pic {
+    margin-bottom: 0.20rem
+}
+
+.update .con .btn {
+    color: #fff;
+    background: #1479d7;
+    font-size: 0.28rem;
+    width: 1.6rem;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    margin: 0.32rem auto 0;
+    border-radius: 0.06rem
+}
+
+.update .con .tip {
+    color: #888;
+    visibility: hidden
+}
+
+.update_show {
+    height: 100%
+}
+
+.showwifi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: rgba(0,0,0,0.8);
+    display: none
+}
+
+.showwifi .con {
+    background: #fff;
+    width: 5.6rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 0.1rem;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    margin-top: -1.04rem;
+    padding: 0.66rem 0 0.47rem
+}
+
+.showwifi .con p {
+    text-align: center;
+    font-size: 0.3rem;
+    color: #666;
+    line-height: 0.56rem
+}
+
+.showwifi .con .pic {
+    margin-bottom: 0.2rem
+}
+
+.showwifi .con img {
+    width: 1rem
+}
+
+.showwifi .con .btn {
+    margin-top: 0.46rem;
+    padding: 0 0.42rem
+}
+
+.showwifi .con .btn div {
+    width: 2rem;
+    height: 0.44rem;
+    border: 1px solid #e54852;
+    border-radius: 0.08rem;
+    font-size: 0.3rem;
+    line-height: 0.44rem;
+    text-align: center
+}
+
+.showwifi .con .cancel {
+    color: #e54852;
+    float: left
+}
+
+.showwifi .con .go {
+    color: #fff;
+    background: #e54852;
+    float: right
+}
+
+.rule {
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none
+}
+
+.rule .con {
+    background-color: #fff;
+    width: 6.6rem;
+    border-radius: 0.20rem;
+    left: 50%;
+    top: 0;
+    padding-bottom: 0.64rem;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, 1.3rem, 0);
+    transform: translate3d(-50%, 1.3rem, 0)
+}
+
+.rule .close {
+    top: -0.9rem;
+    right: -0.30rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute
+}
+
+.rule .close img {
+    display: block;
+    width: 0.51rem;
+    margin: 0.26rem auto 0
+}
+
+.rule .tit img {
+    display: block;
+    width: 5rem;
+    margin: 0.3rem auto 0
+}
+
+.rule .qa {
+    color: #666666;
+    font-size: 0.28rem;
+    width: 5.8rem;
+    line-height: 0.36rem;
+    padding-top: 0.26rem;
+    margin: 0 auto
+}
+
+.rule .qa p {
+    margin-top: 0.15rem
+}
+
+.rule .qa a {
+    display: block;
+    text-align: center;
+    margin-top: 0.15rem;
+    color: #ff5e5e;
+    text-decoration: none
+}
+
+@media screen and (min-width: 360px) and (max-width: 374px) {
+    html {
+        font-size:48px
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 383px) {
+    html {
+        font-size:50px
+    }
+}
+
+@media screen and (min-width: 384px) and (max-width: 399px) {
+    html {
+        font-size:51.2px
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 413px) {
+    html {
+        font-size:53.33px
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 512px) {
+    html {
+        font-size:55.20px
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size:42.66px
+    }
+}
+
+@media screen and (max-device-height: 568px) {
+    html {
+        font-size:42.66px
+    }
+}
+
+@media screen and (max-device-height: 480px) {
+    html {
+        font-size:38px
+    }
+}
+
+/*  |xGv00|76d372c793ade6875dbd63f838b8dce1 */
