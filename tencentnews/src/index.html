@@ -94,15 +94,161 @@
         </div>
       </div>
       <div class="bb"></div>
+      <!-- 新闻资讯 -->
+      <div class="news">
+        <div class="title">
+          <div class="dot"></div>
+          <h2>东方头条
+            <em>·</em>
+            <span>今日热点</span>
+          </h2>
+        </div>
+        <div class="con">
+          <ul></ul>
+        </div>
+      </div>
+      <!-- 新闻资讯end -->
     </div>
   </div>
-  <script type="text/javascript" src="//mat1.gtimg.com/joke/js/jm/zepto.min.js"></script>
-  <script type="text/javascript" src="//mat1.gtimg.com/joke/js/jm/touch.min.js"></script>
+  <script type="text/javascript" src="./js/zepto.min.js"></script>
+  <script type="text/javascript" src="./js/touch.min.js"></script>
+  <script type="text/javascript" src="./js/swipeSlide.min.js"></script>
   <script>
     $(function () {
-      $('.openapp').on('click', function () {
+      function appDownload(){
         alert('下载东方头条APP！')
-      })
+      }
+      $('.openapp').on('click', appDownload)
+      $('.news').on('click', 'li', appDownload)
+
+      var data = {
+        "ret": 0,
+        "msg": "normal return.",
+        "news": [
+          {
+            "newsid": "171205110138930",
+            "title": "中国体坛4大传奇抗日英雄，打哭日本奥运冠军，打掉日本拳王门牙",
+            "img": [
+              "http://02.imgmini.eastday.com/mobile/20171205/20171205110138_95a9a1699e5a22f84f513b7267149909_1_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171205073523889",
+            "title": "央视曝光！全是假货，没有一件真品！",
+            "img": [
+              "http://07.imgmini.eastday.com/mobile/20171205/20171205073523_f24a6b626be98a59cd40bff6eb5477aa_1_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171204064955084",
+            "title": "婆媳同月生娃，婆婆没有奶水，将小儿子给媳妇喂引纠纷",
+            "img": [
+              "http://00.imgmini.eastday.com/mobile/20171204/20171204064955_45f8b4aa25b0af8a08d715b7e15e0358_2_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171204173147903",
+            "title": "杭州保姆放火案延期审理 莫焕晶致歉:愿意立刻去死",
+            "img": [
+              "http://00.imgmini.eastday.com/mobile/20171204/20171204173147_fd10cd02cf0e51a8c884ccd35ff7e23a_4_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171204113716989",
+            "title": "汪峰早年青涩旧照曝光 与当年长发飘逸的文青之间差了一条皮裤",
+            "img": [
+              "http://08.imgmini.eastday.com/mobile/20171204/20171204113716_e157053e84e73511eac4c824dc6db5f8_3_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171205110220953",
+            "title": "矢野浩二致歉 盘点活跃在中国娱乐圈的外籍艺人",
+            "img": [
+              "http://05.imgmini.eastday.com/mobile/20171205/20171205110220_8ba86a403d162ddf1acecd097680bf01_4_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171205123636963",
+            "title": "前山西首富被限制出境：曾迎娶影星，百亿企业破产",
+            "img": [
+              "http://03.imgmini.eastday.com/mobile/20171205/20171205123636_9eac0885e986aff0611f138b446e9995_1_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171205192114278",
+            "title": "87版红楼梦演员为女德班站台授课　自称堕胎三次",
+            "img": [
+              "http://06.imgmini.eastday.com/mobile/20171205/20171205192114_c3a978f2c5cbca91bb5f77f94a3ee624_2_mwpm_03200403.jpg"
+            ]
+          },
+          {
+            "newsid": "171202123602637",
+            "title": "王思聪现身音乐节名酒满桌，偷瞄美女的眼神亮了",
+            "img": [
+              "https://p1.pstatp.com/list/190x124/4b4c0010bcc9e2bbed89"
+            ]
+          },
+          {
+            "newsid": "171205081943856",
+            "title": "黄有龙回应质疑 赵薇力挺老公：一生问心无愧",
+            "img": [
+              "http://02.imgmini.eastday.com/mobile/20171205/20171205081943_e730c240aeffc0b5484fbb9f20117755_2_mwpm_03200403.jpg"
+            ]
+          }
+        ]
+      }
+      loadSwiperData(data);
+      function loadSwiperData(result) {
+        if (result.ret == 0 && result.news && result.news.length) {
+          var arr = result.news.sort(function () {
+            return Math.random() > 0.5;
+          });
+          // console.log(arr);
+          var html = '',
+            len = Math.min(arr.length, 5);
+          for (var i = 0; i < len; i++) {
+            var item = arr[i];
+            html += '<li>\
+                        <div class="sitem clearfix">\
+                            <div class="pic">\
+                                <img src="'+ item.img[0] + '" alt="' + item.title + '">\
+                            </div>\
+                            <div class="text">\
+                                <div class="t">'+ item.title + '</div>\
+                                <div class="btn" data-url="qqnews://article_9527?nm='+ item.newsid + '">下载东方头条阅读</div>\
+                            </div>\
+                        </div>\
+                    </li>';
+          }
+          var createDot = function () {
+            var len = $('.news .con li').length;
+            var html = '';
+            for (var i = 0; i < len; i++) {
+              html += '<em></em>';
+            }
+            $('.news .dot').html(html);
+          }
+
+          if (html) {
+            $('.news').show().find('.con ul').html(html);
+            createDot();
+            $('.news .con').swipeSlide({
+              continuousScroll: true,
+              speed: 3000,
+              transitionType: 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+              firstCallback: function (i, sum, me) {
+                $('.news .dot').children().first().addClass('cur');
+              },
+              callback: function (i, sum, me) {
+                $('.news .dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+              }
+            });
+            // AppDownload.checkAppIsInstalled(function () {
+            //   $('.news .btn').attr('data-status', 'success').text('打开东方头条阅读');
+            // });
+          }
+        }
+      }
     });
   </script>
 </body>

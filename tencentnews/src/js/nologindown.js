@@ -1,5 +1,5 @@
 var cookie = {
-    //Ğ´cookies
+    //å†™cookies
     setCookie: function (name, value, day){
         var Days = day || 365;
         var exp =  new  Date();
@@ -7,7 +7,7 @@ var cookie = {
         document.cookie = name +  "=" + escape (value) +  ";expires="  + exp.toGMTString();
     },
      
-    //¶ÁÈ¡cookies
+    //è¯»å–cookies
     getCookie: function (name, type){
         var arr,reg= new  RegExp( "(^| )" +name+ "=([^;]*)(;|$)" );
         if (arr=document.cookie.match(reg)){
@@ -35,7 +35,7 @@ var getScript = function(url, callback, sid) {
 
     head.appendChild(js);
 
-    //Ö´ĞĞ»Øµ÷
+    //æ‰§è¡Œå›è°ƒ
     var callbackFn = function(){
             if(typeof callback === 'function'){
                 callback();
@@ -63,11 +63,11 @@ var os = (function(){
         android: /android/.test(userAgent),
         qqnews: /qqnews/.test(userAgent),
         weixin: /micromessenger/.test(userAgent),
-        mqqbrowser: /mqqbrowser\//.test(userAgent), // QQä¯ÀÀÆ÷
-        qq: /qq/.test(userAgent)&&!/mqqbrowser/.test(userAgent), // ÊÖ»úQQ
-        tenvideo: /qqlivebrowser/.test(userAgent), // ÌÚÑ¶ÊÓÆµ
+        mqqbrowser: /mqqbrowser\//.test(userAgent), // QQæµè§ˆå™¨
+        qq: /qq/.test(userAgent)&&!/mqqbrowser/.test(userAgent), // æ‰‹æœºQQ
+        tenvideo: /qqlivebrowser/.test(userAgent), // è…¾è®¯è§†é¢‘
         qqmusic: /qqmusic/.test(userAgent), //QQMUSIC
-        qqac: /qqac_client/.test(userAgent) // ÌÚÑ¶¶¯Âş
+        qqac: /qqac_client/.test(userAgent) // è…¾è®¯åŠ¨æ¼«
     };
 })();
 
@@ -97,7 +97,7 @@ var tool = {
     getUserInfo : function(type){
         if( os.tenvideo ){
 			type = type || cookie.getCookie('video_login_type');
-        	// ÌÚÑ¶ÊÓÆµ
+        	// è…¾è®¯è§†é¢‘
         	var getVideoInfo = function(){
         		TenvideoJSBridge.invoke("getUserInfo", {"type":["wx", "qq"]}, function(res){
 			        res = JSON.parse(res);
@@ -118,7 +118,7 @@ var tool = {
 		        }, false)
 		    }
         }else if( os.weixin ){
-        	// Î¢ĞÅ
+        	// å¾®ä¿¡
         	var userinfo = cookie.getCookie('prize_wx_user_info', 1);
             if( userinfo ){
                 var user = JSON.parse(userinfo);
@@ -130,16 +130,16 @@ var tool = {
                 this.loginSuccess(decodeURIComponent(user.nickname), user.headimgurl);
             }
         }else{
-        	// »ñÈ¡QQĞÅÏ¢
+        	// è·å–QQä¿¡æ¯
         	if( cookie.getCookie('uin') && cookie.getCookie('skey') ){
                 this.qqLoginSuccess();
             }
         }
     },
 
-    // »ñÈ¡ĞÂÎÅ×ÊÑ¶
+    // è·å–æ–°é—»èµ„è®¯
     getNewsInfo : function(){
-        // ¶Ô×ÊÑ¶¹Ø¼ü´Ê½øĞĞËæ»úÅÅĞò
+        // å¯¹èµ„è®¯å…³é”®è¯è¿›è¡Œéšæœºæ’åº
         var arr = [],
             index = 0,
             len = 0;
@@ -164,15 +164,15 @@ var tool = {
 
 tool.init();
 
-var sstxt = '´ò¿ªÌÚÑ¶ĞÂÎÅ£¬ÌáÏÖÎÒµÄºì°ü'; // ÒÑ°²×°»òÏÂÔØ°²×°Íê³ÉºóµÄÎÄ°¸
-var haolitxt = 'Á¢¼´Ç©µ½Áìº¾Àñ';
-AppDownload.unicodeTxt.down = 'ÕıÔÚÏÂÔØÌÚÑ¶ĞÂÎÅ';
+var sstxt = 'æ‰“å¼€ä¸œæ–¹å¤´æ¡ï¼Œæç°æˆ‘çš„çº¢åŒ…'; // å·²å®‰è£…æˆ–ä¸‹è½½å®‰è£…å®Œæˆåçš„æ–‡æ¡ˆ
+var haolitxt = 'ç«‹å³ç­¾åˆ°é¢†å£•ç¤¼';
+AppDownload.unicodeTxt.down = 'æ­£åœ¨ä¸‹è½½ä¸œæ–¹å¤´æ¡';
 AppDownload.nowifi = function(){
     $('.showwifi').show();
 }
 var wzp = new wzPing(bossData);
 
-// ÒÑ°²×°
+// å·²å®‰è£…
 AppDownload.checkAppIsInstalled(function(){
 	$('.down_tip').hide();
 
@@ -180,14 +180,14 @@ AppDownload.checkAppIsInstalled(function(){
 	$('.haslogin .sign').attr('data-status', 'success').find('.txt').text(haolitxt);
 });
 
-// ÏÂÔØ³É¹¦
+// ä¸‹è½½æˆåŠŸ
 AppDownload.installSuccess = function(){
     // $('.haslogin .tixian_btn .progress').css( 'width', '0%' );
     $('.haslogin .openapp').attr('data-status', 'success').find('.txt').text(sstxt);
 	$('.haslogin .sign').attr('data-status', 'success').find('.txt').text(haolitxt);
 };
 
-// ´ò¿ª»òÏÂÔØ
+// æ‰“å¼€æˆ–ä¸‹è½½
 $('.haslogin .openapp').on('tap', function(){
 	if( !$(this).hasClass('btn_disabled') ){
 		AppDownload.openUrl = gloabConfig.openUrl;
@@ -251,7 +251,7 @@ window['getNewsCallback'] = function(result){
                             </div>\
                             <div class="text">\
                                 <div class="t">'+item.title+'</div>\
-                                <div class="btn" data-url="qqnews://article_9527?nm='+item.newsid+'">ÏÂÔØÌÚÑ¶ĞÂÎÅÔÄ¶Á</div>\
+                                <div class="btn" data-url="qqnews://article_9527?nm='+item.newsid+'">ä¸‹è½½ä¸œæ–¹å¤´æ¡é˜…è¯»</div>\
                             </div>\
                         </div>\
                     </li>';
@@ -283,13 +283,13 @@ window['getNewsCallback'] = function(result){
             });
             
             AppDownload.checkAppIsInstalled(function(){
-                $('.news .btn').attr('data-status', 'success').text( '´ò¿ªÌÚÑ¶ĞÂÎÅÔÄ¶Á' );
+                $('.news .btn').attr('data-status', 'success').text( 'æ‰“å¼€ä¸œæ–¹å¤´æ¡é˜…è¯»' );
             });
         }
 	}
 }
 
-// µÇÂ¼£¬ÌÚÑ¶ĞÂÎÅ¹«ÖÚºÅÊÚÈ¨
+// ç™»å½•ï¼Œä¸œæ–¹å¤´æ¡å…¬ä¼—å·æˆæƒ
 $('.nologin .btn').on('click', function(){
     if( os.weixin ){
 		window.location.href = 'http://api.prize.qq.com/wxlogin/login/wx9bf1f2b2b6610eb0/newsapp';
@@ -317,7 +317,7 @@ $('.nologin .btn').on('click', function(){
 	}
 });
 
-// µ¯´°
+// å¼¹çª—
 /* $('.haslogin .tixian_btn').on('tap', function(){
 	// $('.uplayer').show();
 	// $(document.body).css({
@@ -332,7 +332,7 @@ $('.nologin .btn').on('click', function(){
     wzp.sendEvent(wzp.data);
 }); */
 
-// ÎŞwifiÇé¿öµÄµ¯´°£¬È¡Ïû|¼ÌĞø
+// æ— wifiæƒ…å†µçš„å¼¹çª—ï¼Œå–æ¶ˆ|ç»§ç»­
 $('.showwifi').on('tap', '.cancel', function(){
     $('.showwifi').hide();
 }).on('tap', '.close', function(){
@@ -342,7 +342,7 @@ $('.showwifi').on('tap', '.cancel', function(){
     AppDownload.run(true);
 });
 
-//»î¶¯¹æÔò
+//æ´»åŠ¨è§„åˆ™
 $('.rule_btn').on('tap', function(){
 	$('.rule').show();
 });
