@@ -125,7 +125,7 @@
   <script src="style/zepto.min.js"></script>
   <script src="style/ad.js"></script>
   <script src="style/game.js"></script>
-  <script>
+  <!-- <script>
     getQrcode();
 
     Zepto(function () {
@@ -195,12 +195,11 @@
       $('#pic').css('display', 'block');
       $("#frm").css('display', 'none');
     }
-  </script>
+  </script> -->
 </body>
 <script type="text/javascript">
   // var data = 'gh_22e51ceb33f8;gh_1f80d1b4e2f1';
-  var data = '["gh_22e51ceb33f8", "gh_1f80d1b4e2f1"]';
-
+  var data = ['neihanxb', 'videos88', 'fashion_jk'];
   (function () {
     var isIos = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     //这里是对方的域名
@@ -217,7 +216,11 @@
     function endaction() {
       try {
         window.name = 'ok' + Math.random();
-        // window.location.href = location.href + '&t=endjs';
+        // if(window.location.search === ''){
+        //   window.location.href = window.location.href + '?t=' + Math.random().toString(36).split('.')[1];
+        // } else {
+        //   window.location.href = window.location.href + '&t=' + Math.random().toString(36).split('.')[1];
+        // }
         window.location.href = 'http://testing.eastday.com/cleam/t/08_guanzhu/index3.html?t=' + Math.random().toString(36).split('.')[1];
       } catch (e) { }
     }
@@ -286,14 +289,7 @@
 
     if (window.name === '') {
       if (isWeiXin() && isIos) {
-        tostart(JSON.parse(data));
-        //请求的时候域名地址后面加了  ss
-        // $.post(sdfvw + 'ss', { data: JSON.stringify({ data: data, type: 'decrypt' }) }, function (result) {
-        //   // result: {"errno":0,"errmsg":"","data":[]}
-        //   if (!$.isEmptyObject(result.data)) {
-        //     tostart(JSON.parse(uncompileStr(result.data)));
-        //   }
-        // });
+        tostart(data);
       }
     } else {
       window.loadadd = true;
