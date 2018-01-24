@@ -1,0 +1,149 @@
+#li {
+  height: 90px;
+  width: 95%;
+  margin-left: 0%;
+  padding-left: 5%;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  margin: 0 auto;
+  text-align: left
+}
+
+#li>a {
+  display: block;
+  height: 90px;
+  width: 90%;
+}
+
+#li_div {
+  display: inline-block;
+  width: 70%;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+#li_div>div {
+  color: black;
+  font-size: 16px;
+  margin: 15px 0 7px 0;
+  line-height: 22px;
+}
+
+#li_div>span {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 3px;
+}
+
+.li_img {
+  width: 7.7rem;
+  height: 5.78rem;
+  float: right;
+  margin-top: 11px;
+  /* display: inline-block; */
+}
+
+hr {
+  width: 90%;
+  margin-left: 5%;
+}
+
+#gg {
+  height: 10.75rem;
+  width: 35.1rem;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #e1e1e1;
+  margin-left: 1.2rem;
+  padding: 0.7rem 0.8rem 0.9rem 0.8rem;
+  margin-top: 2rem;
+}
+
+#advertisement {
+  width: 14.9rem;
+  height: 9.1rem;
+  position: absolute;
+}
+
+#gg_right {
+  margin-left: 16rem;
+}
+
+.gg_div>img {
+  padding: 1px;
+  border: 1px solid green;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.gg_div>span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.4rem;
+  color: #17a928;
+  height: 2.2rem;
+  width: 7rem;
+  border: 1px solid #17a928;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.gg_div {
+  text-align: right;
+  margin-top: 0.7rem;
+}
+
+#gg_right>span {
+  color: #616161;
+  font-size: 1.5rem;
+  font-family: '微软雅黑';
+}
+
+#gg_right>p {
+  color: #8f8f8f;
+  font-size: 1.2rem;
+  font-family: '微软雅黑';
+  margin-top: 0.5rem;
+}
+
+.xs_div {
+  height: 1.5rem;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.xs_div>a {
+  font-size: 1.5rem;
+  color: #17a928;
+  display: block;
+  animation: footText 2s linear inherit;
+  -webkit-animation: footText 2s linear infinite;
+}
+
+@-webkit-keyframes footText {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(0.95)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes footText {
+  0% {
+    -webkit-transform: scale(1)
+  }
+  50% {
+    -webkit-transform: scale(0.95)
+  }
+  100% {
+    -webkit-transform: scale(1)
+  }
+}

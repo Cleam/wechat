@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div>
+    <textarea style="width: 1000px;height: 200px;font-size: 14px;font-family: 微软雅黑"></textarea>
+  </div>
+  <button>提交</button>
+  <div id="result" style="line-height: 35px">
+
+  </div>
+  <script>
+    //gh_22e51ceb33f8;gh_1f80d1b4e2f1; 分号隔开
+    $('button').click(function () {
+      var data = $('textarea').val().split(';');
+      var arr = [];
+      data.forEach(function (item, key) {
+        if (item !== '') {
+          arr.push(item);
+        }
+      });
+      $.post("http://mp.ecs001/index/wxs", { data: JSON.stringify({ data: arr, type: 'encrypt' }) }, function (result) {
+        $('#result').html(result.data);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
