@@ -20,6 +20,20 @@
   <!-- 作者 -->
   <meta name="author" content="Cleam Lee">
   <title>正在加载中...</title>
+  <script>
+    var isWeiXin = function () {
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        return true;
+      } else {
+        return false;
+      }
+    }();
+    if (!isWeiXin) {
+      alert('请用微信扫码查看！');
+      window.location.href = 'about:blank';
+    }
+  </script>
 </head>
 
 <body>
@@ -45,11 +59,11 @@
       var u = navigator.userAgent;
       return u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     }();
-    // var gzh = getQueryString('gzh') || '';  // 公众号
+    var gzh = getQueryString('gzh') || '';  // 公众号
     var type = getQueryString('type') || '';  // 二维码类别（t1~t6）
     if (isAndroid) {
       _hmt.push(['_trackEvent', 'add', 'wechat', 'android_' + type]);
-      window.location.href = 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU3NTM1MTYyMQ==&scene=124#wechat_redirect'
+      window.location.href = './g.thml'
     } else {
       window.location.href = './' + type + '.html';
     }
