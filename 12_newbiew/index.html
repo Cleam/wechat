@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>如果性别反转，你的长相会是什么样？</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+    <meta itemprop="name" content="如果性别反转，你的长相会是什么样？" />
+    <meta itemprop="image" content="http://e3dev.blacklily.cn/media/quiz/images/share_intro/1482896721122-KIj3YxRZZ5ISpdv8.jpg"
+    />
+    <link rel="shortcut icon" href="http://e3dev.blacklily.cn/static/favicon.jpg">
+    <meta property="fb:app_id" content="1915904188661848" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="如果性别反转，你的长相会是什么样？" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://e3dev.blacklily.cn/media/quiz/images/intro/1482896605365-y8JWeEmYIeaTgeLn.jpg"
+    />
+    <link rel="stylesheet" href="http://e3dev.blacklily.cn/static/CACHE/css/61beb8178fef.css" type="text/css" />
+    <script src="//cdn.bootcss.com/vue/2.2.1/vue.min.js"></script>
+    <script src="//cdn.bootcss.com/vue-resource/1.2.1/vue-resource.min.js"></script>
+    <script src="//cdn.bootcss.com/atrament.js/0.2.3/atrament.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?42f14c4cb295e9a87317bc116cf118f5";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+            var gads = document.createElement("script");
+            gads.async = true;
+            gads.type = "text/javascript";
+            var useSSL = "https:" == document.location.protocol;
+            gads.src = (useSSL ? "https:" : "http:") +
+                "//www.googletagservices.com/tag/js/gpt.js";
+            var node = document.getElementsByTagName("script")[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9708305791061367",
+            enable_page_level_ads: true
+        });
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+    <link rel="stylesheet" href="http://e3dev.blacklily.cn/static/css/index.css">
+    <script src="http://e3dev.blacklily.cn/static/images/flag/flagBase64.json"></script>
+    <header id="header">
+        <a class="header-a">
+            <img id="header_logo_img" v-on:click="jumpHomePage()" src="" alt="" width="105" height="45" style="margin-left: 20px;vertical-align: middle;">
+        </a>
+        <div class="header-lang-div">
+            <img v-on:click="changeLang(flag.name)" v-for="flag in flags" class="header-lang-img hand" v-bind:src="flag.value" alt="">
+        </div>
+    </header>
+    <script>
+        new Vue({
+            el: '#header',
+            data: {
+                showFlagList: false,
+                flags: _flag_base64.data,
+                canChangeLang: true,
+            },
+            mounted: function () {
+                var _this = this;
+                var nowHostLang = location.host.split(".")[0];
+                for (var i = 0; i < _flag_base64.data.length; i++) {
+                    if (_flag_base64.data[i].name == nowHostLang) {
+                        return;
+                    }
+                }
+                //如果没有匹配上 默认为中国 并隐藏其他 且点击无效
+                if (i === _flag_base64.data.length) {
+                    console.log("Country no match => URL")
+                    _this.flags = [{ value: _flag_base64.initData }]
+                    _this.canChangeLang = false;
+                }
+            },
+            methods: {
+                changeLang: function (lang) {
+                    // console.log(lang)
+                    var _this = this;
+                    if (!_this.canChangeLang)
+                        return;
+                    var href = window.location.hostname;
+                    window.location.href = "http://" + lang + href.substring((window.location.hostname).indexOf("."));
+                },
+                jumpHomePage: function () {
+                    window.location.href = "http://" + window.location.hostname;
+                }
+            }
+        })
+
+    </script>
+
+
+    <input type="hidden" id="region" name="region" value="cn">
+
+
+
+    <div id="question-app">
+        <div :class="{'small-gray':!quiz_loaded}" class="main-boxing">
+            <div class="content" v-show="!quiz_loaded">
+                <div class="boxing">
+                    <div class="intro">
+
+                        <div class="container compact full">
+                            <div class="meaning-image">
+                                <div class="ratio-outer">
+                                    <img class="ratio-inner" src="http://e3dev.blacklily.cn/media/quiz/images/intro/1482896605365-y8JWeEmYIeaTgeLn.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container compact">
+                            <div class="question">
+                                <span>
+                                    如果性别反转，你的长相会是什么样？
+                                </span>
+                            </div>
+                            <div class="description">
+                                <span>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blur-wrapper" v-show="quiz_loaded" style="display:none">
+                <div>
+                    <div class="question-common" id="question-container" v-if="question" v-show="!calculating">
+                        <div>
+                            <div class="container compact full" id="q-image-container" v-show="question.image">
+                                <div class='quiz-question quiz-image'>
+                                    <span class='quiz-image'>
+                                        <img v-bind:src="question.image" />
+                                    </span>
+                                </div>
+                            </div>
+                            <hr class="separator">
+                            <div class="container compact">
+                                <div class="title">
+                                    <div class="progress">
+                                        <span class="value">
+                                            <span class="current" id="q-index-container">
+                                                <span class='quiz-index' v-text="qindex + 1">
+
+                                                </span>
+                                            </span>
+                                            <span id="q-length">
+                                                / [[ qlength ]]
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="q-title-container" class="question">
+                                        <span class='quiz-title' v-text="question.title"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container compact full" id="q-audio-container" v-show="question.audio">
+                                <div class='quiz-question quiz-audio'>
+                                    <span class='quiz-audio'>
+                                        <audio v-bind:src='question.audio' id="question_audio" controls='' style='width: 80%; padding-left: 10%'></audio>
+                                    </span>
+                                </div>
+                            </div>
+                            <hr class="separator">
+                        </div>
+                        <!-- <hr class="separator"> -->
+                    </div>
+
+                    <div class="adbanner question-ad" id="top-ad" v-show="!calculating">
+
+                        <vue-adsense v-if="switch_ad_time == 0" data-ad-client="ca-pub-8492433796752731" data-ad-slot="9977332805" style="display:inline-block;width:320px;height:100px"></vue-adsense>
+
+                        <vue-dfp v-else dfp-id="div-gpt-ad-1474958383656-0" slot-id="/34009881/Xifun.me_TOP" width="320" height="100"></vue-dfp>
+                    </div>
+                    <div class="question-common" id="question-choice-container" v-show="!calculating">
+                        <div class="container compact" id="q-qc-container">
+                            <div class='answers' v-bind:class="qccssclass" v-if="question">
+                                <div v-if="qtype===0">
+                                    <div v-for="choices in choice_pair">
+                                        <div class="pair">
+                                            <div class="button-wrapper" v-for="choice in choices">
+                                                <button type="button" class="flat choice_button" @click="qsubmit($event, choice)">
+                                                    <img v-bind:src="choice.image">
+                                                    <audio v-if="choice.audio" class="choice_audio audio" v-bind:src="choice.audio" controls=''></audio>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-else-if="qtype===1">
+                                    <div v-for="choice in question.choice">
+                                        <div>
+                                            <button type="button" class="flat choice_button" @mousedown="btnMousedown" @mouseup="btnMouseup" @touchstart="btnMousedown"
+                                                @touchend="btnMouseup" @mouseout="btnMouseup" @click="qsubmit($event, choice)"
+                                                v-text="choice.title">
+                                                <audio v-if="choice.audio" class="choice_audio audio" v-bind:src="choice.audio" controls=''></audio>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div v-else-if="qtype===2">
+                                    <!-- <img crossOrigin="Anonymous" id="preview_image" class="preview-image" v-bind:src="image_url"/> -->
+                                    <img id="preview_image" class="preview-image" v-bind:src="image_url" />
+                                    <div class="pair">
+                                        <a href="javascript:document.getElementById('fileobj').click()">
+                                            <button type="button" class="upload-image-btn">
+                                                <span class="upload-btn-text" v-if="!show_upload_next_button">[[ $t("Camera / Photo") ]]</span>
+                                                <span class="upload-btn-text" v-else>[[ $t("Please add the images") ]]</span>
+                                            </button>
+                                        </a>
+                                        <input type="file" id="fileobj" accept="image/*" style="display:none" @change="fileobj_change">
+                                    </div>
+                                    <input type="hidden" id="image-url" v-model="image_url" />
+                                    <div class="pair" v-show="show_upload_next_button">
+                                        <button class="next-button choice_button" @click="qsubmit_upload">
+                                            <span class="next-btn-text" style="color:#fff;">[[ $t("Next") ]]</span>
+                                        </button>
+                                    </div>
+                                    <canvas id="sketchpad" style="display:none;" />
+                                </div>
+
+
+                                <div v-else-if="qtype===3">
+                                    <input id="insert-name" class="insert-name" type="text" v-bind:placeholder="question.description" v-model="insert_name"> </input>
+                                    <div class="privacy-notice">
+                                        <span> [[ $t("Your information will not be used besides this quiz.")]] </span>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <button class="next-button choice_button theme-next-button" type="button" @click="qsubmit">
+                                            <span class="btn-text">[[ $t("Next") ]]</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div v-else-if="qtype===4">
+                                    <div class="sketchpad-pair">
+                                        <vue-sketchpad :background="question.choice[0].image"></vue-sketchpad>
+                                        <div class="privacy-notice">
+                                            <span> [[ $t("Your information will not be used besides this quiz.")]] </span>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <button class="next-button choice_button" type="button" @click="qsubmit_upload">
+                                                <span class="btn-text">[[ $t("Next") ]]</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="upload-loader" class="loader" v-show="show_loading"></div>
+
+                    <div class="container full border-top-bottom" id="loading-bar" style="border-bottom:1px solid #eee;padding-bottom: 20px;"
+                        v-show="calculating">
+
+                        <div class="loading-title">[[ $t("Calculating result...")]]</div>
+                        <div class="loading">
+                            <div class="activity-indicator">
+                                <div>
+                                    <div class="loading-bar"></div>
+                                    <div class="loading-bar"></div>
+                                    <div class="loading-bar"></div>
+                                    <div class="loading-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="adbanner question-ad">
+
+                <vue-adsense v-if="switch_ad_time == 0" data-ad-client="ca-pub-8492433796752731" data-ad-slot="2454066005" style="display:inline-block;width:320px;height:250px"></vue-adsense>
+
+                <vue-dfp v-else dfp-id="div-gpt-ad-1475135755183-0" slot-id="/34009881/Xifun.me_CONTENT" width="300" height="250"></vue-dfp>
+            </div>
+
+            <div class="container full" id="loading-img-container"></div>
+
+            <div class="container compact speradlistbox">
+                <div class="quiz-list" id="q-list-container" v-for="(quiz, f_index) in quiz_list">
+                    <div class="adbanner question-ad" v-if="f_index==2">
+
+                        <vue-adsense v-if="switch_ad_time == 0" data-ad-client="ca-pub-8492433796752731" data-ad-slot="4716360008" style="display:inline-block;width:320px;height:250px"></vue-adsense>
+
+                        <vue-dfp v-else dfp-id="div-gpt-ad-1492156717637-0" slot-id="/34009881/Xifun.me_CONTENT2" width="320" height="250"></vue-dfp>
+                    </div>
+                    <suggest-list :quiz-id="quiz.id" :quiz-title="quiz.title" :quiz-image="quiz.image" :quiz-url="quiz.share_mp_url"></suggest-list>
+                </div>
+            </div>
+
+            <div class="adbanner question-ad">
+
+                <vue-adsense v-if="switch_ad_time == 0" data-ad-client="ca-pub-8492433796752731" data-ad-slot="5407532400" style="display:inline-block;width:320px;height:250px"></vue-adsense>
+
+                <vue-dfp v-else dfp-id="div-gpt-ad-1474957172177-0" slot-id="/34009881/Xifun.me_BOTTOM" width="320" height="100"></vue-dfp>
+            </div>
+        </div>
+    </div>
+
+    <div id="qrcode-popup" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="popup_close" class="close">&times;</span>
+                <p>长按订阅，每日更新</p>
+            </div>
+            <img id="qrcode_img" width="100%" src="http://e3dev.blacklily.cn/static/images/qrcode_wechat_12.jpg" />
+        </div>
+    </div>
+
+    <div id="canvasContainer"></div>
+
+    <input type="text" id="quiz_id" value="67" style="display:none;" />
+    <input type="text" id="switch_ad_time" value="0" style="display:none;" />
+    <input type="text" id="skip_intro" value="Y" style="display:none;" />
+    <input type="text" id="fr_token" value="" style="display: none;" />
+    <input type="hidden" id="user_id" value="None">
+    <input type="hidden" id="user_name" value="None">
+    <input type="hidden" id="user_headimgurl" value="None">
+    <img class="sns-share-img" style="display:none;" src="http://e3dev.blacklily.cn/media/quiz/images/share_intro/1482896721122-KIj3YxRZZ5ISpdv8.jpg">
+    <img class="wechat-share-img" style="display:none;" src="http://e3dev.blacklily.cn/media/quiz/images/share_intro/1482896721122-KIj3YxRZZ5ISpdv8.jpg">
+    <div id="fb-root"></div>
+    <script type="text/javascript" src="http://e3dev.blacklily.cn/static/CACHE/js/d863ccef6d06.js"></script>
+    <script>
+        var _theme = {
+            quiztop: {
+                logoImg: 'quiztop.png',
+                headerBg: '#fff',
+                bodyBg: '#ececec',
+                boxBg: '#fff',
+                titleBg: '#82c3d5',
+                nextBtnBg: '#4EBB6E',
+                subPhotoBtnBg: '#62cf82'
+            },
+            zjcs: {
+                logoImg: 'zjcs.png',
+                headerBg: '#fff',
+                bodyBg: '#ececec',
+                boxBg: '#fff',
+                titleBg: '#f56349',
+                nextBtnBg: '#3cb9a6',
+                subPhotoBtnBg: '#caede7'
+            },
+            funbnt: {
+                logoImg: 'funbnt.png',
+                headerBg: '#ffeb66',
+                bodyBg: '#ffeb66',
+                boxBg: '#edf7e7',
+                titleBg: '#66cbc4',
+                nextBtnBg: '#95d469',
+                subPhotoBtnBg: '#afdf8e'
+            },
+            hbxcs: {
+                logoImg: 'hbxcs.png',
+                headerBg: '#060040',
+                bodyBg: '#060040',
+                boxBg: '#fff',
+                titleBg: '#fdcd0f',
+                nextBtnBg: '#3e9eed',
+                subPhotoBtnBg: '#5cbdff'
+            },
+            qwcs: {
+                logoImg: 'qwcs.png',
+                headerBg: '#79b7d8',
+                bodyBg: '#79b7d8',
+                boxBg: '#fff',
+                titleBg: '#fdcd0f',
+                nextBtnBg: '#13cbc2',
+                subPhotoBtnBg: '#7cf7ee'
+            },
+            clyc: {
+                logoImg: 'clyc.png',
+                headerBg: '#fff',
+                bodyBg: '#e9e8e6',
+                boxBg: '#fff',
+                titleBg: '#14ccc3',
+                nextBtnBg: '#d25030',
+                subPhotoBtnBg: '#ea6e83'
+            }
+        }
+
+        var themeindex = document.getElementById('quiz_id').value
+        var theme = _theme[selectTheme(themeindex)]
+
+        document.getElementsByTagName('header')[0].style.backgroundColor = theme.headerBg
+        document.querySelector('#header_logo_img').src = 'http://e3dev.blacklily.cn/static/images/logo/' + theme.logoImg + ''
+        document.getElementsByTagName('body')[0].style.backgroundColor = theme.bodyBg
+        document.querySelector('.main-boxing').style.backgroundColor = theme.boxBg
+        document.querySelector('.title').style.backgroundColor = theme.titleBg
+        document.querySelector('.next-button').style.background = theme.nextBtnBg
+        document.querySelector('.choice_button').style.background = theme.nextBtnBg
+        document.querySelector('.theme-next-button').style.background = theme.nextBtnBg
+        var doms = document.getElementsByClassName('upload-image-btn')
+        for (var i = 0; i < doms.length; i++) {
+            doms[i].style.background = theme.subPhotoBtnBg
+        }
+        if ('undefined' == typeof _fbIsLogin || 'undefined' == typeof _needFblogin) {
+            var _fbIsLogin = '';
+            var _needFblogin = '';
+        }
+    </script>
+    <script type="text/javascript" src="http://e3dev.blacklily.cn/static/CACHE/js/b2659e68fe0b.js"></script>
+
+</body>
+
+</html>
