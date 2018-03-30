@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>广告覆盖</title>
+  <title>mp.weixin.qq.com</title>
+  <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+  <style>
+    body {}
+
+    .container {
+      background-color: yellow;
+      position: relative;
+      height: 1200px;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 15px 0;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      text-align: center;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 </head>
+
 <body>
-  
-  
+  <div class="container">
+    <h2>模仿下滑微信网页信息</h2>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p>下面还有内容...</p>
+    <p class="bottom">~到底了~</p>
+  </div>
+
+  <script>
+    var isTop = false;
+    $('.container').on('touchstart', function (e) {
+      e.preventDefault();
+      console.log($(this).offset());
+      if ($(this).offset().top <= 0) {
+        isTop = true;
+      } else {
+        isTop = false;
+      }
+    }).on('touchmove', function (e) {
+      if (isTop) {
+        e.preventDefault();
+      } else {
+
+      }
+    })
+
+    var ZgTouch = (function () {
+      function ZgTouch(options) {
+
+      }
+      ZgTouch.prototype = {
+        up: function () {
+
+        },
+        down: function () {
+
+        },
+        left: function () {
+
+        },
+
+      }
+      return ZgTouch
+    }());
+  </script>
+
 </body>
+
 </html>
