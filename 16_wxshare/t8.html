@@ -172,7 +172,8 @@
       // var link = 'https://activity.eastday.com/wechat/180403210958756.html';  // 正常
       // var link = 'http://hotns.eastday.com.cn/h5/activity/activity.html';  // 不正常
       // var link = 'https://resources.dftoutiao.com/apprentice/index.html';  // 正常
-      var link = 'http://wxapi.eastday.com/demo/test?url=https://activity.eastday.com/wechat/180403210958756.html';  // 解决不了问题。
+      // var link = 'http://wxapi.eastday.com/demo/test?url=https://activity.eastday.com/wechat/180403210958756.html';  // 解决不了问题。
+      var link = 'http://tt.tvmall.shop/r.html?' + encodeURIComponent(window.location.href);  // 
       // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
       wx.onMenuShareTimeline({
         title: title, // 分享标题
